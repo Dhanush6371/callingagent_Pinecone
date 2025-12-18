@@ -91,27 +91,15 @@ class CreateOrderArgs(BaseModel):
 @function_tool()
 async def lookup_menu(query: str):
     """
-    MANDATORY TOOL: Search menu items using Pinecone with hierarchical filtering.
+    Search menu items using Pinecone with hierarchical filtering.
     This automatically filters by section/sub_section/protein to reduce token usage by 80-90%.
     
-    ⚠️ CRITICAL: You MUST call this tool for ANY mention of:
-    - Food items (e.g., "biryani", "chicken", "dosa", "paneer")
-    - Prices (e.g., "how much", "price", "cost")
-    - Categories (e.g., "appetizers", "desserts", "beverages")
-    - Ordering (e.g., "I want biryani", "give me chicken", "one dosa")
-    
-    You have ZERO knowledge of menu items or prices. You MUST use this tool even for simple orders.
-    
     Examples:
-    - User: "I want biryani" → MUST call lookup_menu("biryani")
-    - User: "chicken biryani" → MUST call lookup_menu("chicken biryani")
-    - User: "how much is dosa" → MUST call lookup_menu("dosa")
-    - User: "one paneer curry" → MUST call lookup_menu("paneer curry")
-    
-    Filtering examples:
     - "chicken biryani" → searches only non_veg/biryani/chicken items (~8-10 items instead of 399)
     - "masala puri" → searches only veg/chaat items (~13 items instead of 399)
     - "mutton biryani" → searches only non_veg/biryani/mutton items (~5 items instead of 399)
+    
+    ALWAYS use this tool for menu, price, and category queries.
     """
     # Run blocking Pinecone + OpenAI calls in a thread
     # search_menu() automatically applies hierarchical filtering
@@ -137,6 +125,11 @@ def create_order_tool_factory(agent_instance):
         """Create an order with the provided items."""
         if agent_instance and agent_instance.order_placed:
             return "I'm sorry, but I can only place one order per call. Your previous order has already been confirmed."
+        
+        # Validate quantity limit (max 10 per item)
+        for item in items:
+            if item.quantity > 10:
+                return f"Sorry, you can order a maximum of 10 for a single item. You requested {item.quantity} of {item.name}. Could you please reduce the quantity to 10 or less?"
 
         # Use caller phone if available
         if agent_instance and agent_instance.caller_phone:
@@ -250,6 +243,7 @@ class RestaurantAgent(Agent):
         self.termination_started = False
         self.order_placed = False
         self.job_context = job_context
+        self.greeting_in_progress = False  # Track if greeting is being spoken
 
         global current_agent
         current_agent = self
@@ -274,6 +268,13 @@ class RestaurantAgent(Agent):
     async def on_message(self, message, session):
         if self.termination_started:
             return "The call is ending. Thank you for choosing Bawarchi Restaurant!"
+        
+        # 🔒 PROTECT GREETING: Ignore user messages while greeting is in progress
+        # This prevents the agent from interrupting the greeting and confusing user logic
+        if self.greeting_in_progress:
+            log.info("⏸️ Ignoring user message - greeting in progress")
+            return None  # Return None to ignore the message
+        
         try:
             # Use reasonable timeout - balance between waiting and responsiveness
             # If LLM is consistently slow, fallback will kick in
@@ -307,15 +308,42 @@ class RestaurantAgent(Agent):
         try:
             # Generate greeting (enabled by default, can be disabled with ENABLE_TTS=0)
             if os.getenv("ENABLE_TTS", "1") != "0":
+                # 🔒 Set greeting flag to protect from interruptions
+                self.greeting_in_progress = True
+                log.info("🔒 Greeting started - protecting from user interruptions")
+                
                 # Personalized greeting if customer name is available
                 if self.customer_name:
                     greeting = f'Say the complete greeting in English: "Hello {self.customer_name}! Welcome back to Bawarchi Restaurant. I am emma. What would you like to order today?" Say all parts of the greeting - do not skip any words.'
                 else:
                     greeting = 'Say the complete greeting in English: "Hello! Welcome to Bawarchi Restaurant. I am emma. What would you like to order today?" Say all parts of the greeting - do not skip any words.'
                 
-                session.generate_reply(instructions=greeting)
+                # Generate greeting and wait for it to complete
+                async def generate_and_clear_greeting():
+                    try:
+                        # Generate greeting and await its completion (like in termination code)
+                        # This will wait for the greeting speech to actually finish
+                        await asyncio.wait_for(
+                            session.generate_reply(instructions=greeting),
+                            timeout=10.0  # Reasonable timeout for greeting
+                        )
+                        # Flag cleared when greeting actually completes (not time-based)
+                    except asyncio.TimeoutError:
+                        log.warning("Greeting timeout - clearing flag anyway")
+                    except Exception as e:
+                        # If generate_reply raises an error or is not awaitable,
+                        # the greeting has still been initiated
+                        log.debug(f"Greeting initiated: {e}")
+                    finally:
+                        # Clear flag when greeting completes (event-based, not time-based)
+                        self.greeting_in_progress = False
+                        log.info("✅ Greeting completed - user interactions now allowed")
+                
+                # Start greeting generation in background
+                asyncio.create_task(generate_and_clear_greeting())
         except Exception as e:
             log.warning(f"Greeting generation error: {e}, continuing anyway")
+            self.greeting_in_progress = False  # Clear flag on error
 
     # ------------------------------------------------------------
     # 🧩 FULL TERMINATION SEQUENCE
