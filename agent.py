@@ -105,6 +105,33 @@ async def lookup_menu(query: str):
     # search_menu() automatically applies hierarchical filtering
     return await asyncio.to_thread(search_menu, query)
 
+def check_customer_status_tool_factory(agent_instance):
+    """Factory function to create a check_customer_status tool to check if customer is new or returning"""
+    @function_tool()
+    async def check_customer_status():
+        """
+        Check if the current caller is a new or returning customer.
+        
+        WHEN TO CALL: ONLY after customer explicitly says YES to order confirmation question.
+        
+        Returns:
+            - "returning_customer" with name if customer exists in Clover
+            - "new_customer" if customer doesn't exist (need to collect name)
+        """
+        if agent_instance and agent_instance.customer_name:
+            return {
+                "status": "returning_customer",
+                "name": agent_instance.customer_name,
+                "message": f"Customer {agent_instance.customer_name} found in our system. No need to ask for name."
+            }
+        else:
+            return {
+                "status": "new_customer",
+                "message": "Customer not found in our system. Please collect their name before placing the order."
+            }
+    
+    return check_customer_status
+
 def store_customer_name_tool_factory(agent_instance):
     """Factory function to create a store_customer_name tool to store name immediately when customer says it"""
     @function_tool()
@@ -122,7 +149,20 @@ def create_order_tool_factory(agent_instance):
     """Factory function to create a create_order tool bound to a specific agent instance"""
     @function_tool()
     async def create_order(items: List[OrderItem], phone: str | None = None, name: str | None = None, address: str | None = None):
-        """Create an order with the provided items."""
+        """
+        Place the customer's order in the restaurant system.
+        
+        ⚠️ CRITICAL: ONLY call this function after ALL of the following conditions are met:
+        1. Customer said "that's all" / "no more items"
+        2. You read back the order summary with total
+        3. You asked "Would you like me to confirm this order?"
+        4. Customer explicitly said YES / "confirm" / "place it"
+        5. You called check_customer_status()
+        6. If new customer: You collected and stored their name
+        
+        NEVER call this if customer just said "that's all" - that only means they're done adding items.
+        NEVER call this without explicit YES to the confirmation question.
+        """
         if agent_instance and agent_instance.order_placed:
             return "I'm sorry, but I can only place one order per call. Your previous order has already been confirmed."
         
@@ -230,11 +270,12 @@ class RestaurantAgent(Agent):
         
         create_order_tool = create_order_tool_factory(self)
         store_name_tool = store_customer_name_tool_factory(self)
+        check_status_tool = check_customer_status_tool_factory(self)
 
-        # 🔴 UPDATED: Add lookup_menu to tools list
+        # 🔴 UPDATED: Add lookup_menu and check_customer_status to tools list
         super().__init__(
             instructions=RestaurantAgent._cached_instructions,
-            tools=[create_order_tool, store_name_tool, lookup_menu],  # 🔴 ADDED lookup_menu
+            tools=[create_order_tool, store_name_tool, check_status_tool, lookup_menu],  # 🔴 ADDED check_status_tool
         )
 
         self.current_session = None
