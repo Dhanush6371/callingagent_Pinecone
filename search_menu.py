@@ -104,18 +104,20 @@ def classify_query(query: str):
     }
 
 
-def search_menu(query: str, top_k: int = 5):
+def search_menu(query: str, top_k: int = 10):
     """
-    Search menu with hierarchical filtering to reduce token usage and latency.
+    Search menu with hierarchical filtering and exact match detection.
     
     The function:
     1. Classifies the query to determine section/sub_section/protein (instant, <1ms)
     2. Applies metadata filters to search only relevant items
-    3. Returns results with name and price
+    3. Checks for exact match - if found, returns only that 1 item
+    4. If no exact match, returns top 5 similar items
     
     This reduces:
     - Token consumption by 80-90% by filtering before semantic search
     - Latency by 20-30% by searching smaller dataset (8-10 items vs 399 items)
+    - Cross-selling by returning only exact match when available
     """
     import time
     start_time = time.time()
@@ -151,6 +153,7 @@ def search_menu(query: str, top_k: int = 5):
     embed_time = time.time() - embed_start
     
     # Step 4: Query Pinecone with filter (FASTER because smaller search space)
+    # Fetch top_k=10 to ensure we get exact matches
     query_start = time.time()
     result = index.query(
         vector=query_vector,
@@ -161,7 +164,7 @@ def search_menu(query: str, top_k: int = 5):
     query_time = time.time() - query_start
     
     # Step 5: Format results
-    results = [
+    all_results = [
         {
             "id": match["id"],
             "score": round(match["score"], 3),
@@ -171,6 +174,48 @@ def search_menu(query: str, top_k: int = 5):
         }
         for match in result["matches"]
     ]
+    
+    # Step 6: Check for exact match
+    # Exact match criteria (STRICT): 
+    # Only consider exact match if:
+    # 1. Very high similarity score (>= 0.85) - indicates strong semantic match
+    # 2. OR the normalized query matches the normalized name exactly
+    # 3. OR the name starts/ends with the query (like "dum biryani" matches "chicken dum biryani")
+    results = all_results
+    exact_match_found = False
+    
+    if all_results:
+        top_result = all_results[0]
+        query_normalized = query.lower().strip()
+        name_normalized = top_result["name"].lower().strip()
+        
+        # STRICT exact match check:
+        # 1. High semantic similarity score
+        is_high_score = top_result["score"] >= 0.85
+        
+        # 2. Names are exactly equal after normalization
+        is_exact_name = query_normalized == name_normalized
+        
+        # 3. Check if name has ONLY the query words (no extra distinguishing words)
+        # Example: "chicken biryani" should NOT match "nawabi chicken biryani"
+        #          "chicken dum biryani" SHOULD match "chicken dum biryani"
+        query_words = set(query_normalized.split())
+        name_words = set(name_normalized.split())
+        # If name has extra words beyond query, it's not exact match
+        extra_words = name_words - query_words
+        # Common generic words that don't make it a different dish
+        generic_words = {"the", "a", "an", "with", "and", "or"}
+        extra_words = extra_words - generic_words
+        has_no_extra_distinguishing_words = len(extra_words) == 0
+        
+        if is_high_score or is_exact_name or (has_no_extra_distinguishing_words and query_words.issubset(name_words)):
+            exact_match_found = True
+            results = [top_result]  # Return only the exact match
+            log.info(f"[EXACT MATCH] Found: {top_result['name']} (score: {top_result['score']})")
+        else:
+            # No exact match - return top 5
+            results = all_results[:5]
+            log.info(f"[NO EXACT MATCH] Returning top 5 similar items (extra words in name: {extra_words})")
     
     total_time = time.time() - start_time
     
@@ -183,11 +228,13 @@ def search_menu(query: str, top_k: int = 5):
 
 if __name__ == "__main__":
     # Test the search
+    print("Menu Search - Returns 1 item for exact match, 5 items for fuzzy match")
     while True:
         q = input("\nSearch menu (or 'exit'): ")
         if q.lower() == "exit":
             break
         results = search_menu(q)
-        print(f"\nFound {len(results)} results:")
+        match_type = "EXACT MATCH" if len(results) == 1 else "SIMILAR ITEMS"
+        print(f"\n{match_type} - Found {len(results)} result(s):")
         for i, item in enumerate(results, 1):
             print(f"{i}. {item['name']} - ${item['price']} (score: {item['score']})")
