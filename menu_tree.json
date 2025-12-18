@@ -1,0 +1,2121 @@
+{
+  "veg": {
+    "appetizer": {
+      "items": [
+        {
+          "id": "veg_karampodi_idli",
+          "name": "Karampodi Idli",
+          "price": 10.95
+        },
+        {
+          "id": "veg_crispy_corn",
+          "name": "Crispy Corn",
+          "price": 11.45
+        },
+        {
+          "id": "veg_chilli_crispy_corn",
+          "name": "Chilli Crispy Corn",
+          "price": 11.95
+        },
+        {
+          "id": "veg_baby_corn_65",
+          "name": "Baby Corn 65",
+          "price": 11.95
+        },
+        {
+          "id": "veg_gobi_65",
+          "name": "Gobi 65",
+          "price": 12.45
+        },
+        {
+          "id": "veg_pudina_gobi",
+          "name": "Pudina Gobi",
+          "price": 12.45
+        },
+        {
+          "id": "veg_gobi_manchurian",
+          "name": "Gobi Manchurian",
+          "price": 12.45
+        },
+        {
+          "id": "veg_karivepaku_gobi",
+          "name": "Karivepaku Gobi",
+          "price": 12.45
+        },
+        {
+          "id": "veg_karampodi_gobi",
+          "name": "Karampodi Gobi",
+          "price": 12.45
+        },
+        {
+          "id": "veg_guntur_gobi",
+          "name": "Guntur Gobi",
+          "price": 12.45
+        },
+        {
+          "id": "veg_corn_manchurian",
+          "name": "Corn Manchurian",
+          "price": 12.45
+        },
+        {
+          "id": "veg_karampodi_corn",
+          "name": "Karampodi Corn",
+          "price": 12.45
+        },
+        {
+          "id": "veg_karivepaku_corn",
+          "name": "Karivepaku Corn",
+          "price": 12.45
+        },
+        {
+          "id": "veg_lemon_pepper_corn",
+          "name": "Lemon Pepper Corn",
+          "price": 12.45
+        },
+        {
+          "id": "veg_chilli_garlic_lotus_stem",
+          "name": "Chilli Garlic Lotus Stem",
+          "price": 12.45
+        },
+        {
+          "id": "veg_karampodi_lotus_stem",
+          "name": "Karampodi Lotus Stem",
+          "price": 12.45
+        },
+        {
+          "id": "veg_karivepaku_lotus_stem",
+          "name": "Karivepaku Lotus Stem",
+          "price": 12.45
+        },
+        {
+          "id": "veg_manchurian",
+          "name": "Veg Manchurian",
+          "price": 12.95
+        },
+        {
+          "id": "veg_chilli_mushroom",
+          "name": "Chilli Mushroom",
+          "price": 12.45
+        },
+        {
+          "id": "veg_mushroom_manchurian",
+          "name": "Mushroom Manchurian",
+          "price": 12.45
+        },
+        {
+          "id": "veg_pachi_mirchi_mushroom",
+          "name": "Pachi Mirchi Mushroom",
+          "price": 12.45
+        },
+        {
+          "id": "veg_karivepaku_mushroom",
+          "name": "Karivepaku Mushroom",
+          "price": 12.45
+        },
+        {
+          "id": "veg_karampodi_mushroom",
+          "name": "Karampodi Mushroom",
+          "price": 12.45
+        },
+        {
+          "id": "veg_karampodi_kofta",
+          "name": "Karampodi Kofta",
+          "price": 12.95
+        },
+        {
+          "id": "veg_lemon_pepper_kofta",
+          "name": "Lemon Pepper Kofta",
+          "price": 12.95
+        },
+        {
+          "id": "veg_kofta_555",
+          "name": "Kofta 555",
+          "price": 12.95
+        },
+        {
+          "id": "veg_noodles",
+          "name": "Veg Noodles",
+          "price": 13.45
+        },
+        {
+          "id": "veg_schezwan_noodles",
+          "name": "Schezwan Noodles",
+          "price": 13.95
+        },
+        {
+          "id": "veg_fried_rice",
+          "name": "Veg Fried Rice",
+          "price": 13.45
+        },
+        {
+          "id": "veg_schezwan_fried_rice",
+          "name": "Schezwan Fried Rice",
+          "price": 13.95
+        },
+        {
+          "id": "veg_noodles_fried_rice_fusion",
+          "name": "Noodles and Fried Rice Fusion",
+          "price": 14.45
+        },
+        {
+          "id": "veg_schezwan_noodles_fried_rice_fusion",
+          "name": "Schezwan Noodles and Fried Rice Fusion",
+          "price": 14.45
+        }
+      ],
+      "paneer": [
+        {
+          "id": "paneer_65",
+          "name": "Paneer 65",
+          "price": 13.95
+        },
+        {
+          "id": "paneer_cutlet_bites",
+          "name": "Paneer Cutlet Bites",
+          "price": 13.95
+        },
+        {
+          "id": "andhra_paneer",
+          "name": "Andhra Paneer",
+          "price": 13.95
+        },
+        {
+          "id": "chilli_paneer",
+          "name": "Chilli Paneer",
+          "price": 13.95
+        },
+        {
+          "id": "guntur_paneer",
+          "name": "Guntur Paneer",
+          "price": 13.95
+        },
+        {
+          "id": "paneer_555",
+          "name": "Paneer 555",
+          "price": 13.95
+        },
+        {
+          "id": "rr_paneer",
+          "name": "RR Paneer",
+          "price": 13.95
+        }
+      ]
+    },
+    "soup": {
+      "items": [
+        {
+          "id": "sambar_soup",
+          "name": "Sambar Soup",
+          "price": 5.95
+        },
+        {
+          "id": "tomato_soup",
+          "name": "Tomato Soup",
+          "price": 7.45
+        },
+        {
+          "id": "veg_sweet_corn_soup",
+          "name": "Veg Sweet Corn Soup",
+          "price": 7.45
+        },
+        {
+          "id": "chicken_sweet_corn_soup",
+          "name": "Chicken Sweet Corn Soup",
+          "price": 7.95
+        },
+        {
+          "id": "veg_hot_sour_soup",
+          "name": "Veg Hot and Sour Soup",
+          "price": 7.45
+        },
+        {
+          "id": "chicken_hot_sour_soup",
+          "name": "Chicken Hot and Sour Soup",
+          "price": 7.95
+        },
+        {
+          "id": "veg_manchow_soup",
+          "name": "Veg Manchow Soup",
+          "price": 7.45
+        },
+        {
+          "id": "chicken_manchow_soup",
+          "name": "Chicken Manchow Soup",
+          "price": 7.95
+        }
+      ]
+    },
+    "tandoori": {
+      "items": [
+        {
+          "id": "paneer_tikka_kabab",
+          "name": "Paneer Tikka Kabab",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_tikka_kabab",
+          "name": "Chicken Tikka Kabab",
+          "price": 14.45
+        },
+        {
+          "id": "hariyali_chicken_kabab",
+          "name": "Hariyali Chicken Kabab",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_seekh_kabab",
+          "name": "Chicken Seekh Kabab",
+          "price": 14.95
+        },
+        {
+          "id": "malai_chicken_tikka_kabab",
+          "name": "Malai Chicken Tikka Kabab",
+          "price": 19.95
+        },
+        {
+          "id": "mutton_seekh_kabab",
+          "name": "Mutton Seekh Kabab",
+          "price": 15.95
+        },
+        {
+          "id": "tandoori_pomfret",
+          "name": "Tandoori Pomfret",
+          "price": 15.95
+        },
+        {
+          "id": "tandoori_chicken_half",
+          "name": "Tandoori Chicken Half",
+          "price": 12.95
+        },
+        {
+          "id": "tandoori_chicken_full",
+          "name": "Tandoori Chicken Full",
+          "price": 19.95
+        }
+      ]
+    },
+    "quick_bites": {
+      "items": [
+        {
+          "id": "veg_samosa",
+          "name": "Veg Samosa",
+          "price": 4.95
+        },
+        {
+          "id": "onion_samosa",
+          "name": "Onion Samosa",
+          "price": 6.45
+        },
+        {
+          "id": "corn_samosa",
+          "name": "Corn Samosa",
+          "price": 6.45
+        },
+        {
+          "id": "jalapeno_cheese_samosa",
+          "name": "Jalapeno Cheese Samosa",
+          "price": 6.95
+        },
+        {
+          "id": "veg_kheema_samosa",
+          "name": "Veg Kheema Samosa",
+          "price": 6.95
+        },
+        {
+          "id": "veg_cutlet",
+          "name": "Veg Cutlet",
+          "price": 6.95
+        },
+        {
+          "id": "veg_lollipops",
+          "name": "Veg Lollipops",
+          "price": 6.95
+        },
+        {
+          "id": "corn_roll",
+          "name": "Corn Roll",
+          "price": 6.95
+        }
+      ]
+    },
+    "chaat": {
+      "items": [
+        {
+          "id": "pani_puri",
+          "name": "Pani Puri",
+          "price": 7.95
+        },
+        {
+          "id": "samosa_chaat",
+          "name": "Samosa Chaat",
+          "price": 9.95
+        },
+        {
+          "id": "aloo_tikki_chaat",
+          "name": "Aloo Tikki Chaat",
+          "price": 9.95
+        },
+        {
+          "id": "papdi_chaat",
+          "name": "Papdi Chaat",
+          "price": 7.95
+        },
+        {
+          "id": "pav_bhaji",
+          "name": "Pav Bhaji",
+          "price": 9.95
+        },
+        {
+          "id": "vada_pav",
+          "name": "Vada Pav",
+          "price": 7.95
+        },
+        {
+          "id": "sev_puri",
+          "name": "Sev Puri",
+          "price": 8.45
+        },
+        {
+          "id": "masala_puri",
+          "name": "Masala Puri",
+          "price": 8.45
+        },
+        {
+          "id": "dahi_puri",
+          "name": "Dahi Puri",
+          "price": 8.45
+        },
+        {
+          "id": "bhel_puri",
+          "name": "Bhel Puri",
+          "price": 8.45
+        },
+        {
+          "id": "munta_masala",
+          "name": "Munta Masala",
+          "price": 7.95
+        },
+        {
+          "id": "peanut_masala",
+          "name": "Peanut Masala",
+          "price": 9.45
+        },
+        {
+          "id": "boiled_peanut_masala",
+          "name": "Boiled Peanut Masala",
+          "price": 9.45
+        },
+        {
+          "id": "kheema_pav",
+          "name": "Kheema Pav",
+          "price": 13.95
+        }
+      ]
+    },
+    "tiffin": {
+      "items": [
+        {
+          "id": "idli",
+          "name": "Idli",
+          "price": 7.95
+        },
+        {
+          "id": "sambar_idli",
+          "name": "Sambar Idli",
+          "price": 8.95
+        },
+        {
+          "id": "babai_idli",
+          "name": "Babai Idli",
+          "price": 8.95
+        },
+        {
+          "id": "thatte_idli",
+          "name": "Thatte Idli",
+          "price": 9.95
+        },
+        {
+          "id": "ulavacharu_sizzler_idli",
+          "name": "Ulavacharu Sizzler Idli",
+          "price": 13.95
+        },
+        {
+          "id": "medu_vada",
+          "name": "Medu Vada",
+          "price": 8.95
+        },
+        {
+          "id": "masala_vada",
+          "name": "Masala Vada",
+          "price": 13.95
+        },
+        {
+          "id": "sambar_vada",
+          "name": "Sambar Vada",
+          "price": 9.95
+        },
+        {
+          "id": "plain_dosa",
+          "name": "Plain Dosa",
+          "price": 8.95
+        },
+        {
+          "id": "onion_dosa",
+          "name": "Onion Dosa",
+          "price": 10.45
+        },
+        {
+          "id": "podi_dosa",
+          "name": "Podi Dosa",
+          "price": 10.95
+        },
+        {
+          "id": "ghee_dosa",
+          "name": "Ghee Dosa",
+          "price": 10.95
+        },
+        {
+          "id": "cheese_dosa",
+          "name": "Cheese Dosa",
+          "price": 11.45
+        },
+        {
+          "id": "masala_dosa",
+          "name": "Masala Dosa",
+          "price": 11.45
+        },
+        {
+          "id": "ghee_karam_dosa",
+          "name": "Ghee Karam Dosa",
+          "price": 11.95
+        },
+        {
+          "id": "guntur_karam_dosa",
+          "name": "Guntur Karam Dosa",
+          "price": 11.95
+        },
+        {
+          "id": "mysore_masala_dosa",
+          "name": "Mysore Masala Dosa",
+          "price": 11.95
+        },
+        {
+          "id": "rava_dosa",
+          "name": "Rava Dosa",
+          "price": 12.95
+        },
+        {
+          "id": "rava_onion_dosa",
+          "name": "Rava Onion Dosa",
+          "price": 13.95
+        },
+        {
+          "id": "rava_masala_dosa",
+          "name": "Rava Masala Dosa",
+          "price": 13.95
+        },
+        {
+          "id": "chicken_tikka_dosa",
+          "name": "Chicken Tikka Dosa",
+          "price": 13.45
+        },
+        {
+          "id": "paneer_tikka_dosa",
+          "name": "Paneer Tikka Dosa",
+          "price": 13.95
+        },
+        {
+          "id": "70mm_dosa",
+          "name": "70mm Dosa",
+          "price": 12.95
+        },
+        {
+          "id": "70mm_masala_dosa",
+          "name": "70mm Masala Dosa",
+          "price": 13.95
+        },
+        {
+          "id": "dosa_chicken_curry",
+          "name": "Dosa with Chicken Curry",
+          "price": 14.45
+        },
+        {
+          "id": "dosa_goat_curry",
+          "name": "Dosa with Goat Curry",
+          "price": 15.95
+        },
+        {
+          "id": "goat_kheema_dosa",
+          "name": "Goat Kheema Dosa",
+          "price": 15.95
+        },
+        {
+          "id": "pesarattu_upma",
+          "name": "Pesarattu Upma",
+          "price": 11.95
+        },
+        {
+          "id": "plain_pesarattu",
+          "name": "Plain Pesarattu",
+          "price": 8.95
+        },
+        {
+          "id": "onion_pesarattu",
+          "name": "Onion Pesarattu",
+          "price": 9.95
+        },
+        {
+          "id": "ghee_pesarattu",
+          "name": "Ghee Pesarattu",
+          "price": 10.95
+        },
+        {
+          "id": "steam_dosa_bellam_pakam",
+          "name": "Steam Dosa with Bellam Pakam",
+          "price": 11.95
+        },
+        {
+          "id": "mulbagal_dosa",
+          "name": "Mulbagal Dosa",
+          "price": 11.45
+        },
+        {
+          "id": "benne_dosa",
+          "name": "Benne Dosa",
+          "price": 10.45
+        },
+        {
+          "id": "puri_bhaji",
+          "name": "Puri Bhaji",
+          "price": 10.95
+        },
+        {
+          "id": "chole_puri",
+          "name": "Chole Puri",
+          "price": 10.95
+        },
+        {
+          "id": "puri_chicken_curry",
+          "name": "Puri with Chicken Curry",
+          "price": 15.45
+        },
+        {
+          "id": "puri_goat_kheema_curry",
+          "name": "Puri with Goat Kheema Curry",
+          "price": 16.95
+        },
+        {
+          "id": "puri_goat_curry",
+          "name": "Puri with Goat Curry",
+          "price": 16.95
+        },
+        {
+          "id": "plain_uthappam",
+          "name": "Plain Uthappam",
+          "price": 10.95
+        },
+        {
+          "id": "onion_uthappam",
+          "name": "Onion Uthappam",
+          "price": 11.45
+        },
+        {
+          "id": "chilli_onion_uthappam",
+          "name": "Chilli Onion Uthappam",
+          "price": 11.95
+        },
+        {
+          "id": "mix_veg_uthappam",
+          "name": "Mix Veg Uthappam",
+          "price": 11.95
+        },
+        {
+          "id": "ghee_podi_uthappam",
+          "name": "Ghee Podi Uthappam",
+          "price": 11.95
+        },
+        {
+          "id": "chilli_cheese_uthappam",
+          "name": "Chilli Cheese Uthappam",
+          "price": 11.95
+        }
+      ]
+    },
+    "thali": {
+      "items": [
+        {
+          "id": "veg_thali",
+          "name": "Veg Thali",
+          "price": 11.99
+        },
+        {
+          "id": "non_veg_thali",
+          "name": "Non-Veg Thali",
+          "price": 14.99
+        },
+        {
+          "id": "maharaja_veg_thali",
+          "name": "Maharaja Veg Thali",
+          "price": 14.99
+        },
+        {
+          "id": "maharaja_non_veg_thali",
+          "name": "Maharaja Non-Veg Thali",
+          "price": 18.99
+        }
+      ]
+    },
+    "entree": {
+      "items": [
+        {
+          "id": "gobi_manchurian_wet",
+          "name": "Gobi Manchurian Wet",
+          "price": 13.45
+        },
+        {
+          "id": "corn_manchurian_wet",
+          "name": "Corn Manchurian Wet",
+          "price": 13.45
+        },
+        {
+          "id": "veg_manchurian_wet",
+          "name": "Veg Manchurian Wet",
+          "price": 13.45
+        },
+        {
+          "id": "chicken_manchurian_wet",
+          "name": "Chicken Manchurian Wet",
+          "price": 13.95
+        },
+        {
+          "id": "schezwan_chicken_wet",
+          "name": "Schezwan Chicken Wet",
+          "price": 13.95
+        },
+        {
+          "id": "chilli_chicken_wet",
+          "name": "Chilli Chicken Wet",
+          "price": 13.95
+        },
+        {
+          "id": "dragon_shrimp_wet",
+          "name": "Dragon Shrimp Wet",
+          "price": 15.95
+        },
+        {
+          "id": "dal_tadka",
+          "name": "Dal Tadka",
+          "price": 12.45
+        },
+        {
+          "id": "menthikura_pappu",
+          "name": "Menthikura Pappu",
+          "price": 13.95
+        },
+        {
+          "id": "ulli_pulusu",
+          "name": "Ulli Pulusu",
+          "price": 13.95
+        },
+        {
+          "id": "channa_masala",
+          "name": "Channa Masala",
+          "price": 12.95
+        },
+        {
+          "id": "aloo_matar",
+          "name": "Aloo Matar",
+          "price": 12.95
+        },
+        {
+          "id": "aloo_gobi_masala",
+          "name": "Aloo Gobi Masala",
+          "price": 12.95
+        },
+        {
+          "id": "bhindi_fry",
+          "name": "Bhindi Fry",
+          "price": 12.95
+        },
+        {
+          "id": "vegetable_khorma",
+          "name": "Vegetable Khorma",
+          "price": 12.95
+        },
+        {
+          "id": "kadai_vegetable",
+          "name": "Kadai Vegetable",
+          "price": 13.45
+        },
+        {
+          "id": "channa_palak",
+          "name": "Channa Palak",
+          "price": 13.45
+        },
+        {
+          "id": "chettinadu_veg_curry",
+          "name": "Chettinadu Veg Curry",
+          "price": 13.45
+        },
+        {
+          "id": "dal_makhani",
+          "name": "Dal Makhani",
+          "price": 13.95
+        },
+        {
+          "id": "masala_bhindi",
+          "name": "Masala Bhindi",
+          "price": 13.95
+        },
+        {
+          "id": "gutti_vankaya_curry",
+          "name": "Gutti Vankaya Curry",
+          "price": 13.95
+        },
+        {
+          "id": "kofta_tikka_masala",
+          "name": "Kofta Tikka Masala",
+          "price": 14.95
+        },
+        {
+          "id": "malai_kofta",
+          "name": "Malai Kofta",
+          "price": 14.95
+        },
+        {
+          "id": "mushroom_cashew_khorma",
+          "name": "Mushroom Cashew Khorma",
+          "price": 14.95
+        },
+        {
+          "id": "mushroom_masala",
+          "name": "Mushroom Masala",
+          "price": 14.95
+        },
+        {
+          "id": "veg_jalfrezi",
+          "name": "Veg Jalfrezi",
+          "price": 12.95
+        }
+      ],
+      "paneer": [
+        {
+          "id": "paneer_tikka_masala",
+          "name": "Paneer Tikka Masala",
+          "price": 14.95
+        },
+        {
+          "id": "paneer_butter_masala",
+          "name": "Paneer Butter Masala",
+          "price": 14.95
+        },
+        {
+          "id": "saag_paneer",
+          "name": "Saag Paneer",
+          "price": 14.95
+        },
+        {
+          "id": "shahi_paneer",
+          "name": "Shahi Paneer",
+          "price": 14.95
+        },
+        {
+          "id": "kadai_paneer",
+          "name": "Kadai Paneer",
+          "price": 14.95
+        },
+        {
+          "id": "matar_paneer",
+          "name": "Matar Paneer",
+          "price": 14.95
+        },
+        {
+          "id": "methi_chaman",
+          "name": "Methi Chaman",
+          "price": 14.95
+        },
+        {
+          "id": "chettinadu_paneer",
+          "name": "Chettinadu Paneer",
+          "price": 14.95
+        }
+      ]
+    },
+    "house_special": {
+      "items": [
+        {
+          "id": "mudda_pappu_avakai_rice",
+          "name": "Mudda Pappu Avakai Rice",
+          "price": 9.45
+        },
+        {
+          "id": "gongura_rice",
+          "name": "Gongura Rice",
+          "price": 9.45
+        },
+        {
+          "id": "andhra_nethi_avakai_rice",
+          "name": "Andhra Nethi Avakai Rice",
+          "price": 9.45
+        },
+        {
+          "id": "sambar_rice",
+          "name": "Sambar Rice",
+          "price": 9.45
+        },
+        {
+          "id": "curd_rice",
+          "name": "Curd Rice",
+          "price": 9.45
+        },
+        {
+          "id": "nuziveedu_curd_rice",
+          "name": "Nuziveedu Curd Rice",
+          "price": 10.45
+        },
+        {
+          "id": "raagi_mudda_kodi_kura",
+          "name": "Raagi Mudda Kodi Kura",
+          "price": 13.95
+        },
+        {
+          "id": "raagi_mudda_veta_mamsam",
+          "name": "Raagi Mudda Veta Mamsam",
+          "price": 17.95
+        }
+      ]
+    },
+    "side_order": {
+      "items": [
+        {
+          "id": "onion_salad",
+          "name": "Onion Salad",
+          "price": 0.95
+        },
+        {
+          "id": "white_rice",
+          "name": "White Rice",
+          "price": 2.95
+        },
+        {
+          "id": "chapathi",
+          "name": "Chapathi",
+          "price": 2.95
+        },
+        {
+          "id": "puri_2",
+          "name": "Puri",
+          "price": 4.95
+        },
+        {
+          "id": "plain_naan",
+          "name": "Plain Naan",
+          "price": 3.45
+        },
+        {
+          "id": "butter_naan",
+          "name": "Butter Naan",
+          "price": 3.95
+        },
+        {
+          "id": "tandoori_roti_plain",
+          "name": "Tandoori Roti Plain",
+          "price": 2.95
+        },
+        {
+          "id": "tandoori_roti_butter",
+          "name": "Tandoori Roti Butter",
+          "price": 3.45
+        },
+        {
+          "id": "chilli_naan",
+          "name": "Chilli Naan",
+          "price": 4.45
+        },
+        {
+          "id": "garlic_naan",
+          "name": "Garlic Naan",
+          "price": 4.45
+        },
+        {
+          "id": "chilli_garlic_naan",
+          "name": "Chilli Garlic Naan",
+          "price": 4.45
+        },
+        {
+          "id": "cheese_naan",
+          "name": "Cheese Naan",
+          "price": 4.95
+        },
+        {
+          "id": "onion_kulcha",
+          "name": "Onion Kulcha",
+          "price": 4.95
+        },
+        {
+          "id": "aloo_kulcha",
+          "name": "Aloo Kulcha",
+          "price": 4.95
+        },
+        {
+          "id": "parotta",
+          "name": "Parotta",
+          "price": 4.95
+        },
+        {
+          "id": "biryani_rice",
+          "name": "Biryani Rice",
+          "price": 4.45
+        },
+        {
+          "id": "pulav_rice",
+          "name": "Pulav Rice",
+          "price": 4.45
+        }
+      ]
+    },
+    "biryani": {
+      "items": [
+        {
+          "id": "veg_dum_biryani",
+          "name": "Veg Dum Biryani",
+          "price": 14.45
+        },
+        {
+          "id": "veg_kheema_biryani",
+          "name": "Veg Kheema Biryani",
+          "price": 15.95
+        },
+        {
+          "id": "paneer_biryani",
+          "name": "Paneer Biryani",
+          "price": 15.95
+        },
+        {
+          "id": "gutti_vankaya_biryani",
+          "name": "Gutti Vankaya Biryani",
+          "price": 15.95
+        },
+        {
+          "id": "paneer_veg_biryani",
+          "name": "Paneer Veg Biryani",
+          "price": 16.45
+        },
+        {
+          "id": "ulavacharu_veg_biryani",
+          "name": "Ulavacharu Veg Biryani",
+          "price": 16.45
+        }
+      ]
+    },
+    "pulav": {
+      "items": [
+        {
+          "id": "veg_kheema_pulav",
+          "name": "Veg Kheema Pulav",
+          "price": 15.95
+        },
+        {
+          "id": "paneer_pulav",
+          "name": "Paneer Pulav",
+          "price": 15.95
+        },
+        {
+          "id": "pachi_mirchi_paneer_pulav",
+          "name": "Pachi Mirchi Paneer Pulav",
+          "price": 15.95
+        },
+        {
+          "id": "gutti_vankaya_pulav",
+          "name": "Gutti Vankaya Pulav",
+          "price": 15.95
+        },
+        {
+          "id": "gongura_gutti_vankaya_pulav",
+          "name": "Gongura Gutti Vankaya Pulav",
+          "price": 15.95
+        },
+        {
+          "id": "cashew_paneer_pulav",
+          "name": "Cashew Paneer Pulav",
+          "price": 15.95
+        },
+        {
+          "id": "rr_paneer_pulav",
+          "name": "RR Paneer Pulav",
+          "price": 15.95
+        },
+        {
+          "id": "nawabi_veg_pulav",
+          "name": "Nawabi Veg Pulav",
+          "price": 15.95
+        },
+        {
+          "id": "mushroom_pepper_pulav",
+          "name": "Mushroom Pepper Pulav",
+          "price": 15.95
+        },
+        {
+          "id": "kofta_tikka_pulav",
+          "name": "Kofta Tikka Pulav",
+          "price": 15.95
+        }
+      ]
+    },
+    "dessert": {
+      "items": [
+        {
+          "id": "sweet_paan",
+          "name": "Sweet Paan",
+          "price": 2.45
+        },
+        {
+          "id": "gulab_jamun",
+          "name": "Gulab Jamun",
+          "price": 4.45
+        },
+        {
+          "id": "rasmalai",
+          "name": "Rasmalai",
+          "price": 4.95
+        },
+        {
+          "id": "mango_rasmalai",
+          "name": "Mango Rasmalai",
+          "price": 5.95
+        },
+        {
+          "id": "gulab_jamun_ice_cream",
+          "name": "Gulab Jamun with Ice Cream",
+          "price": 5.95
+        },
+        {
+          "id": "shahi_tukda",
+          "name": "Shahi Tukda",
+          "price": 5.95
+        },
+        {
+          "id": "apricot_delight",
+          "name": "Apricot Delight",
+          "price": 6.95
+        }
+      ]
+    },
+    "ice_cream": {
+      "items": [
+        {
+          "id": "kulfi_stick",
+          "name": "Kulfi Stick",
+          "price": 3.95
+        },
+        {
+          "id": "kulfi_cone",
+          "name": "Kulfi Cone",
+          "price": 3.95
+        },
+        {
+          "id": "matka_kulfi_ice_cream",
+          "name": "Matka Kulfi Ice Cream",
+          "price": 5.95
+        },
+        {
+          "id": "choco_bar",
+          "name": "Choco Bar",
+          "price": 3.95
+        },
+        {
+          "id": "mango_bar",
+          "name": "Mango Bar",
+          "price": 3.95
+        },
+        {
+          "id": "cookies_cream_ice_cream_single",
+          "name": "Cookies and Cream Ice Cream Single",
+          "price": 3.95
+        },
+        {
+          "id": "cookies_cream_ice_cream_double",
+          "name": "Cookies and Cream Ice Cream Double",
+          "price": 5.95
+        },
+        {
+          "id": "chocolate_ice_cream_single",
+          "name": "Chocolate Ice Cream Single",
+          "price": 3.95
+        },
+        {
+          "id": "chocolate_ice_cream_double",
+          "name": "Chocolate Ice Cream Double",
+          "price": 5.95
+        },
+        {
+          "id": "vanilla_ice_cream_single",
+          "name": "Vanilla Ice Cream Single",
+          "price": 3.95
+        },
+        {
+          "id": "vanilla_ice_cream_double",
+          "name": "Vanilla Ice Cream Double",
+          "price": 5.95
+        },
+        {
+          "id": "malai_kulfi_ice_cream_single",
+          "name": "Malai Kulfi Ice Cream Single",
+          "price": 3.95
+        },
+        {
+          "id": "malai_kulfi_ice_cream_double",
+          "name": "Malai Kulfi Ice Cream Double",
+          "price": 5.95
+        },
+        {
+          "id": "mango_ice_cream_single",
+          "name": "Mango Ice Cream Single",
+          "price": 3.95
+        },
+        {
+          "id": "mango_ice_cream_double",
+          "name": "Mango Ice Cream Double",
+          "price": 5.95
+        },
+        {
+          "id": "strawberry_ice_cream_single",
+          "name": "Strawberry Ice Cream Single",
+          "price": 3.95
+        },
+        {
+          "id": "strawberry_ice_cream_double",
+          "name": "Strawberry Ice Cream Double",
+          "price": 5.95
+        },
+        {
+          "id": "mint_chocolate_chip_ice_cream_single",
+          "name": "Mint Chocolate Chip Ice Cream Single",
+          "price": 3.95
+        },
+        {
+          "id": "mint_chocolate_chip_ice_cream_double",
+          "name": "Mint Chocolate Chip Ice Cream Double",
+          "price": 5.95
+        },
+        {
+          "id": "cassata_ice_cream",
+          "name": "Cassata Ice Cream",
+          "price": 4.95
+        },
+        {
+          "id": "ice_cream_cone",
+          "name": "Ice Cream Cone",
+          "price": 4.95
+        }
+      ]
+    },
+    "pastry": {
+      "items": [
+        {
+          "id": "pineapple_pastry",
+          "name": "Pineapple Pastry",
+          "price": 3.95
+        },
+        {
+          "id": "black_forest_pastry",
+          "name": "Black Forest Pastry",
+          "price": 3.95
+        },
+        {
+          "id": "chocolate_pastry",
+          "name": "Chocolate Pastry",
+          "price": 3.95
+        },
+        {
+          "id": "mango_pastry",
+          "name": "Mango Pastry",
+          "price": 3.95
+        },
+        {
+          "id": "mixed_fruit_pastry",
+          "name": "Mixed Fruit Pastry",
+          "price": 3.95
+        },
+        {
+          "id": "butterscotch_pastry",
+          "name": "Butterscotch Pastry",
+          "price": 3.95
+        },
+        {
+          "id": "pistachio_pastry",
+          "name": "Pistachio Pastry",
+          "price": 3.95
+        }
+      ]
+    },
+    "shake": {
+      "items": [
+        {
+          "id": "oreo_milkshake",
+          "name": "Oreo Milkshake",
+          "price": 7.95
+        },
+        {
+          "id": "mango_milkshake",
+          "name": "Mango Milkshake",
+          "price": 7.95
+        },
+        {
+          "id": "malai_milkshake",
+          "name": "Malai Milkshake",
+          "price": 7.95
+        },
+        {
+          "id": "chocolate_milkshake",
+          "name": "Chocolate Milkshake",
+          "price": 7.95
+        },
+        {
+          "id": "vanilla_milkshake",
+          "name": "Vanilla Milkshake",
+          "price": 7.95
+        },
+        {
+          "id": "strawberry_milkshake",
+          "name": "Strawberry Milkshake",
+          "price": 7.95
+        },
+        {
+          "id": "falooda_milkshake",
+          "name": "Falooda Milkshake",
+          "price": 7.95
+        }
+      ]
+    },
+    "hot_beverage": {
+      "items": [
+        {
+          "id": "indian_coffee",
+          "name": "Indian Coffee",
+          "price": 2.45
+        },
+        {
+          "id": "indian_masala_chai",
+          "name": "Indian Masala Tea",
+          "price": 2.95
+        },
+        {
+          "id": "irani_chai",
+          "name": "Irani Chai",
+          "price": 2.95
+        }
+      ]
+    },
+    "cold_beverage": {
+      "items": [
+        {
+          "id": "bottled_water",
+          "name": "Bottled Water",
+          "price": 1.45
+        },
+        {
+          "id": "soda_can",
+          "name": "Soda Can",
+          "price": 1.45
+        },
+        {
+          "id": "sparkling_water",
+          "name": "Sparkling Water",
+          "price": 1.95
+        },
+        {
+          "id": "indian_soda",
+          "name": "Indian Soda",
+          "price": 2.75
+        },
+        {
+          "id": "soda_bottle_350ml",
+          "name": "Soda Bottle 350ml",
+          "price": 2.95
+        },
+        {
+          "id": "soda_bottle_500ml",
+          "name": "Soda Bottle 500ml",
+          "price": 3.45
+        },
+        {
+          "id": "goli_soda",
+          "name": "Goli Soda",
+          "price": 3.45
+        },
+        {
+          "id": "butter_milk",
+          "name": "Butter Milk",
+          "price": 4.45
+        },
+        {
+          "id": "nannari_soda",
+          "name": "Nannari Soda",
+          "price": 4.45
+        },
+        {
+          "id": "lemon_soda_sweet",
+          "name": "Lemon Soda Sweet",
+          "price": 4.45
+        },
+        {
+          "id": "lemon_soda_salt",
+          "name": "Lemon Soda Salt",
+          "price": 4.45
+        },
+        {
+          "id": "lemon_soda_both",
+          "name": "Lemon Soda Both",
+          "price": 4.45
+        },
+        {
+          "id": "lemon_soda_masala",
+          "name": "Lemon Soda Masala",
+          "price": 4.45
+        },
+        {
+          "id": "lassi_sweet",
+          "name": "Lassi Sweet",
+          "price": 4.45
+        },
+        {
+          "id": "lassi_salt",
+          "name": "Lassi Salt",
+          "price": 4.45
+        },
+        {
+          "id": "mango_lassi",
+          "name": "Mango Lassi",
+          "price": 4.95
+        },
+        {
+          "id": "chikoo_shake",
+          "name": "Chikoo Shake",
+          "price": 4.95
+        },
+        {
+          "id": "sitaphal_shake",
+          "name": "Sitaphal Shake",
+          "price": 5.95
+        },
+        {
+          "id": "badam_milk",
+          "name": "Badam Milk",
+          "price": 4.95
+        },
+        {
+          "id": "falooda_rose",
+          "name": "Falooda Rose",
+          "price": 6.99
+        },
+        {
+          "id": "falooda_mango",
+          "name": "Falooda Mango",
+          "price": 6.99
+        }
+      ]
+    }
+  },
+  "non_veg": {
+    "appetizer": {
+      "chicken": [
+        {
+          "id": "chicken_65",
+          "name": "Chicken 65",
+          "price": 11.95
+        },
+        {
+          "id": "jeedi_pappu_chicken_pakoda",
+          "name": "Jeedi Pappu Chicken Pakoda",
+          "price": 12.45
+        },
+        {
+          "id": "avakai_kodi_vepudu",
+          "name": "Avakai Kodi Vepudu",
+          "price": 12.95
+        },
+        {
+          "id": "chicken_555",
+          "name": "Chicken 555",
+          "price": 12.95
+        },
+        {
+          "id": "chicken_lollipop",
+          "name": "Chicken Lollipop",
+          "price": 16.95
+        },
+        {
+          "id": "masala_lollipop",
+          "name": "Masala Lollipop",
+          "price": 16.95
+        },
+        {
+          "id": "karampodi_chicken_lollipop",
+          "name": "Karampodi Chicken Lollipop",
+          "price": 17.95
+        },
+        {
+          "id": "chicken_manchurian",
+          "name": "Chicken Manchurian",
+          "price": 12.95
+        },
+        {
+          "id": "chilli_chicken",
+          "name": "Chilli Chicken",
+          "price": 12.95
+        },
+        {
+          "id": "guntur_chicken",
+          "name": "Guntur Chicken",
+          "price": 12.95
+        },
+        {
+          "id": "karampodi_kodi",
+          "name": "Karampodi Kodi",
+          "price": 12.95
+        },
+        {
+          "id": "karivepaku_chicken",
+          "name": "Karivepaku Chicken",
+          "price": 12.95
+        },
+        {
+          "id": "peri_peri_chicken",
+          "name": "Peri Peri Chicken",
+          "price": 12.95
+        },
+        {
+          "id": "dragon_chicken",
+          "name": "Dragon Chicken",
+          "price": 12.95
+        },
+        {
+          "id": "chintaku_chicken",
+          "name": "Chintaku Chicken",
+          "price": 12.95
+        },
+        {
+          "id": "ginger_chicken",
+          "name": "Ginger Chicken",
+          "price": 12.95
+        },
+        {
+          "id": "koli_chips",
+          "name": "Koli Chips",
+          "price": 12.95
+        },
+        {
+          "id": "chicken_rr",
+          "name": "Chicken RR",
+          "price": 12.95
+        },
+        {
+          "id": "pachi_mirchi_kodi",
+          "name": "Pachi Mirchi Kodi",
+          "price": 12.95
+        },
+        {
+          "id": "pudina_chicken",
+          "name": "Pudina Chicken",
+          "price": 12.95
+        },
+        {
+          "id": "chicken_wings",
+          "name": "Chicken Wings",
+          "price": 12.95
+        },
+        {
+          "id": "schezwan_wings",
+          "name": "Schezwan Wings",
+          "price": 12.95
+        }
+      ],
+      "mutton": [
+        {
+          "id": "mutton_pepper_fry",
+          "name": "Mutton Pepper Fry",
+          "price": 16.95
+        },
+        {
+          "id": "mutton_ghee_roast",
+          "name": "Mutton Ghee Roast",
+          "price": 17.95
+        }
+      ],
+      "seafood": [
+        {
+          "id": "chilli_fish",
+          "name": "Chilli Fish",
+          "price": 14.45
+        },
+        {
+          "id": "fish_65",
+          "name": "Fish 65",
+          "price": 14.45
+        },
+        {
+          "id": "fish_fingers",
+          "name": "Fish Fingers",
+          "price": 14.45
+        },
+        {
+          "id": "karampodi_fish",
+          "name": "Karampodi Fish",
+          "price": 14.45
+        },
+        {
+          "id": "apollo_fish",
+          "name": "Apollo Fish",
+          "price": 14.45
+        },
+        {
+          "id": "chilli_basil_fish",
+          "name": "Chilli Basil Fish",
+          "price": 15.95
+        },
+        {
+          "id": "garlic_pepper_shrimp",
+          "name": "Garlic Pepper Shrimp",
+          "price": 15.95
+        },
+        {
+          "id": "chilli_shrimp",
+          "name": "Chilli Shrimp",
+          "price": 15.95
+        },
+        {
+          "id": "karampodi_shrimp",
+          "name": "Karampodi Shrimp",
+          "price": 15.95
+        },
+        {
+          "id": "guntur_shrimp",
+          "name": "Guntur Shrimp",
+          "price": 15.95
+        },
+        {
+          "id": "crispy_prawns",
+          "name": "Crispy Prawns",
+          "price": 15.95
+        },
+        {
+          "id": "ulavacharu_shrimp",
+          "name": "Ulavacharu Shrimp",
+          "price": 15.95
+        },
+        {
+          "id": "shrimp_555",
+          "name": "Shrimp 555",
+          "price": 15.95
+        }
+      ]
+    },
+    "other": {
+      "egg": [
+        {
+          "id": "egg_noodles",
+          "name": "Egg Noodles",
+          "price": 13.95
+        },
+        {
+          "id": "egg_schezwan_noodles",
+          "name": "Egg Schezwan Noodles",
+          "price": 14.45
+        },
+        {
+          "id": "egg_fried_rice",
+          "name": "Egg Fried Rice",
+          "price": 13.95
+        },
+        {
+          "id": "egg_schezwan_fried_rice",
+          "name": "Egg Schezwan Fried Rice",
+          "price": 14.45
+        },
+        {
+          "id": "egg_noodles_fried_rice_fusion",
+          "name": "Egg Noodles and Fried Rice Fusion",
+          "price": 14.95
+        },
+        {
+          "id": "egg_schezwan_noodles_fried_rice_fusion",
+          "name": "Egg Schezwan Noodles and Fried Rice Fusion",
+          "price": 15.45
+        }
+      ],
+      "chicken": [
+        {
+          "id": "chicken_noodles",
+          "name": "Chicken Noodles",
+          "price": 14.45
+        },
+        {
+          "id": "chicken_schezwan_noodles",
+          "name": "Chicken Schezwan Noodles",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_fried_rice",
+          "name": "Chicken Fried Rice",
+          "price": 14.45
+        },
+        {
+          "id": "chicken_schezwan_fried_rice",
+          "name": "Chicken Schezwan Fried Rice",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_noodles_fried_rice_fusion",
+          "name": "Chicken Noodles and Fried Rice Fusion",
+          "price": 15.45
+        },
+        {
+          "id": "chicken_schezwan_noodles_fried_rice_fusion",
+          "name": "Chicken Schezwan Noodles and Fried Rice Fusion",
+          "price": 15.95
+        },
+        {
+          "id": "kheema_fried_rice",
+          "name": "Kheema Fried Rice",
+          "price": 17.45
+        }
+      ]
+    },
+    "entree": {
+      "egg": [
+        {
+          "id": "egg_masala",
+          "name": "Egg Masala",
+          "price": 12.95
+        },
+        {
+          "id": "egg_khorma",
+          "name": "Egg Khorma",
+          "price": 12.95
+        },
+        {
+          "id": "egg_fry",
+          "name": "Egg Fry",
+          "price": 13.45
+        },
+        {
+          "id": "chettinadu_egg_curry",
+          "name": "Chettinadu Egg Curry",
+          "price": 13.45
+        },
+        {
+          "id": "egg_roast_pepper_fry",
+          "name": "Egg Roast Pepper Fry",
+          "price": 13.45
+        },
+        {
+          "id": "ulavacharu_egg_curry",
+          "name": "Ulavacharu Egg Curry",
+          "price": 15.95
+        },
+        {
+          "id": "kodi_guddu_ulli_pulusu",
+          "name": "Kodi Guddu Ulli Pulusu",
+          "price": 15.95
+        },
+        {
+          "id": "kodi_guddu_ulli_iguru",
+          "name": "Kodi Guddu Ulli Iguru",
+          "price": 15.95
+        }
+      ],
+      "chicken": [
+        {
+          "id": "kadai_chicken",
+          "name": "Kadai Chicken",
+          "price": 14.95
+        },
+        {
+          "id": "methi_chicken",
+          "name": "Methi Chicken",
+          "price": 14.95
+        },
+        {
+          "id": "gudivada_chicken_fry",
+          "name": "Gudivada Chicken Fry",
+          "price": 14.95
+        },
+        {
+          "id": "dhaniya_chicken",
+          "name": "Dhaniya Chicken",
+          "price": 14.95
+        },
+        {
+          "id": "andhra_chicken_curry",
+          "name": "Andhra Chicken Curry",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_fry_bone",
+          "name": "Chicken Fry Bone-In",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_saag",
+          "name": "Chicken Saag",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_vindaloo",
+          "name": "Chicken Vindaloo",
+          "price": 14.95
+        },
+        {
+          "id": "karaikudi_chicken",
+          "name": "Karaikudi Chicken",
+          "price": 14.95
+        },
+        {
+          "id": "hyderabad_chicken_curry",
+          "name": "Hyderabad Chicken Curry",
+          "price": 14.95
+        },
+        {
+          "id": "chettinadu_chicken_masala",
+          "name": "Chettinadu Chicken Masala",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_shahi_khorma",
+          "name": "Chicken Shahi Khorma",
+          "price": 14.95
+        },
+        {
+          "id": "butter_chicken",
+          "name": "Butter Chicken",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_tikka_masala",
+          "name": "Chicken Tikka Masala",
+          "price": 14.95
+        },
+        {
+          "id": "chicken_mughlai",
+          "name": "Chicken Mughlai",
+          "price": 14.95
+        },
+        {
+          "id": "gongura_chicken",
+          "name": "Gongura Chicken",
+          "price": 15.95
+        },
+        {
+          "id": "ankapur_chicken",
+          "name": "Ankapur Chicken",
+          "price": 14.95
+        },
+        {
+          "id": "kerala_chicken_curry",
+          "name": "Kerala Chicken Curry",
+          "price": 15.95
+        },
+        {
+          "id": "ulavacharu_chicken_curry",
+          "name": "Ulavacharu Chicken Curry",
+          "price": 15.95
+        }
+      ],
+      "mutton": [
+        {
+          "id": "goat_khorma",
+          "name": "Goat Khorma",
+          "price": 16.95
+        },
+        {
+          "id": "chettinadu_goat_curry",
+          "name": "Chettinadu Goat Curry",
+          "price": 16.95
+        },
+        {
+          "id": "goat_mughlai",
+          "name": "Goat Mughlai",
+          "price": 16.95
+        },
+        {
+          "id": "goat_vindaloo",
+          "name": "Goat Vindaloo",
+          "price": 16.95
+        },
+        {
+          "id": "goat_masala",
+          "name": "Goat Masala",
+          "price": 16.95
+        },
+        {
+          "id": "goat_coconut_fry",
+          "name": "Goat Coconut Fry",
+          "price": 16.95
+        },
+        {
+          "id": "gongura_goat_curry",
+          "name": "Gongura Goat Curry",
+          "price": 17.95
+        },
+        {
+          "id": "karaikudi_goat_curry",
+          "name": "Karaikudi Goat Curry",
+          "price": 16.95
+        },
+        {
+          "id": "goat_kheema_curry",
+          "name": "Goat Kheema Curry",
+          "price": 17.95
+        },
+        {
+          "id": "shahi_gosh",
+          "name": "Shahi Gosh",
+          "price": 16.95
+        }
+      ],
+      "items": [
+        {
+          "id": "lamb_rogan_gosh",
+          "name": "Lamb Rogan Gosh",
+          "price": 16.95
+        },
+        {
+          "id": "lamb_khorma",
+          "name": "Lamb Khorma",
+          "price": 16.95
+        },
+        {
+          "id": "kadai_lamb",
+          "name": "Kadai Lamb",
+          "price": 16.95
+        },
+        {
+          "id": "lamb_vindaloo",
+          "name": "Lamb Vindaloo",
+          "price": 16.95
+        },
+        {
+          "id": "lamb_tikka_masala",
+          "name": "Lamb Tikka Masala",
+          "price": 16.95
+        },
+        {
+          "id": "lamb_saag",
+          "name": "Lamb Saag",
+          "price": 16.95
+        },
+        {
+          "id": "lamb_chettinadu",
+          "name": "Lamb Chettinadu",
+          "price": 16.95
+        }
+      ]
+    },
+    "biryani": {
+      "egg": [
+        {
+          "id": "egg_biryani",
+          "name": "Egg Biryani",
+          "price": 14.95
+        },
+        {
+          "id": "egg_roast_biryani",
+          "name": "Egg Roast Biryani",
+          "price": 15.45
+        },
+        {
+          "id": "ulavacharu_egg_biryani",
+          "name": "Ulavacharu Egg Biryani",
+          "price": 16.95
+        }
+      ],
+      "chicken": [
+        {
+          "id": "chicken_dum_biryani",
+          "name": "Chicken Dum Biryani",
+          "price": 15.45
+        },
+        {
+          "id": "chicken_tikka_biryani",
+          "name": "Chicken Tikka Biryani",
+          "price": 15.45
+        },
+        {
+          "id": "boneless_chicken_biryani",
+          "name": "Boneless Chicken Biryani",
+          "price": 15.95
+        },
+        {
+          "id": "vijayawada_chicken_biryani",
+          "name": "Vijayawada Chicken Biryani",
+          "price": 15.95
+        },
+        {
+          "id": "guntur_chicken_biryani",
+          "name": "Guntur Chicken Biryani",
+          "price": 15.95
+        },
+        {
+          "id": "ulavacharu_chicken_dum_biryani",
+          "name": "Ulavacharu Chicken Dum Biryani",
+          "price": 17.45
+        },
+        {
+          "id": "nawabi_chicken_biryani",
+          "name": "Nawabi Chicken Biryani",
+          "price": 15.95
+        },
+        {
+          "id": "rajahmundry_chicken_fry_piece_biryani",
+          "name": "Rajahmundry Chicken Fry Piece Biryani",
+          "price": 15.95
+        },
+        {
+          "id": "dil_kush_biryani",
+          "name": "Dil Kush Biryani",
+          "price": 15.95
+        }
+      ],
+      "mutton": [
+        {
+          "id": "goat_dum_biryani",
+          "name": "Goat Dum Biryani",
+          "price": 17.95
+        },
+        {
+          "id": "boneless_goat_biryani",
+          "name": "Boneless Goat Biryani",
+          "price": 18.95
+        },
+        {
+          "id": "goat_kheema_biryani",
+          "name": "Goat Kheema Biryani",
+          "price": 18.95
+        },
+        {
+          "id": "ulavacharu_goat_dum_biryani",
+          "name": "Ulavacharu Goat Dum Biryani",
+          "price": 18.95
+        },
+        {
+          "id": "shahi_gosh_biryani",
+          "name": "Shahi Gosh Biryani",
+          "price": 18.95
+        }
+      ],
+      "seafood": [
+        {
+          "id": "fish_biryani",
+          "name": "Fish Biryani",
+          "price": 16.95
+        },
+        {
+          "id": "shrimp_biryani",
+          "name": "Shrimp Biryani",
+          "price": 17.95
+        }
+      ]
+    },
+    "pulav": {
+      "egg": [
+        {
+          "id": "egg_roast_pulav",
+          "name": "Egg Roast Pulav",
+          "price": 14.95
+        },
+        {
+          "id": "pachi_mirchi_egg_pulav",
+          "name": "Pachi Mirchi Egg Pulav",
+          "price": 14.95
+        }
+      ],
+      "chicken": [
+        {
+          "id": "vijayawada_chicken_pulav",
+          "name": "Vijayawada Chicken Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "aavakai_chicken_pulav",
+          "name": "Aavakai Chicken Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "boneless_chicken_pulav",
+          "name": "Boneless Chicken Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "pachi_mirchi_kodi_pulav",
+          "name": "Pachi Mirchi Kodi Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "guntur_chicken_pulav",
+          "name": "Guntur Chicken Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "chicken_rr_pulav",
+          "name": "Chicken RR Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "nawabi_chicken_pulav",
+          "name": "Nawabi Chicken Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "military_chicken_pulav",
+          "name": "Military Chicken Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "rajahmundry_chicken_fry_piece_pulav",
+          "name": "Rajahmundry Chicken Fry Piece Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "chicken_ghee_roast_pulav",
+          "name": "Chicken Ghee Roast Pulav",
+          "price": 17.95
+        }
+      ],
+      "mutton": [
+        {
+          "id": "goat_kheema_pulav",
+          "name": "Goat Kheema Pulav",
+          "price": 18.95
+        },
+        {
+          "id": "boneless_goat_pulav",
+          "name": "Boneless Goat Pulav",
+          "price": 18.95
+        },
+        {
+          "id": "mutton_ghee_roast_pulav",
+          "name": "Mutton Ghee Roast Pulav",
+          "price": 18.95
+        },
+        {
+          "id": "military_mutton_pulav",
+          "name": "Military Mutton Pulav",
+          "price": 18.95
+        }
+      ],
+      "seafood": [
+        {
+          "id": "fish_fry_pulav",
+          "name": "Fish Fry Pulav",
+          "price": 16.95
+        },
+        {
+          "id": "shrimp_fry_pulav",
+          "name": "Shrimp Fry Pulav",
+          "price": 16.95
+        }
+      ]
+    }
+  }
+}

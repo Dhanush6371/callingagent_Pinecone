@@ -1,0 +1,174 @@
+================================================================================
+                    AGENT WORKFLOW - SIMPLIFIED FLOWCHART
+================================================================================
+
+CUSTOMER CALL
+    │
+    ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AGENT INITIALIZES                                                         │
+│ - Loads prompts (cached)                                                  │
+│ - Sets up tools: lookup_menu, store_customer_name, create_order           │
+│ - Connects to OpenAI Realtime API                                         │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AGENT GREETS                                                              │
+│ "Hello! Welcome to Bawarchi Restaurant. How can I help you today?"       │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ CUSTOMER: "I want chicken biryani"                                        │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AGENT'S LLM ANALYZES                                                      │
+│ - Recognizes: "chicken biryani" = menu item                               │
+│ - Decides: Need to search menu                                            │
+│ - Calls: lookup_menu("chicken biryani")                                   │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ HIERARCHICAL SEARCH PROCESS (runs in background thread)                  │
+│                                                                           │
+│ ┌─────────────────────────────────────────────────────────────────────┐ │
+│ │ STEP 1: CLASSIFY (< 1ms)                                            │ │
+│ │ classify_query("chicken biryani")                                   │ │
+│ │   → section: "non_veg"                                              │ │
+│ │   → sub_section: "biryani"                                          │ │
+│ │   → protein: "chicken"                                               │ │
+│ └─────────────────────────────────────────────────────────────────────┘ │
+│                        │                                                  │
+│                        ▼                                                  │
+│ ┌─────────────────────────────────────────────────────────────────────┐ │
+│ │ STEP 2: BUILD FILTER (< 1ms)                                       │ │
+│ │ filter = {                                                           │ │
+│ │   "$and": [                                                          │ │
+│ │     {"section": "non_veg"},                                         │ │
+│ │     {"sub_section": "biryani"},                                     │ │
+│ │     {"protein": "chicken"}                                           │ │
+│ │   ]                                                                  │ │
+│ │ }                                                                    │ │
+│ └─────────────────────────────────────────────────────────────────────┘ │
+│                        │                                                  │
+│                        ▼                                                  │
+│ ┌─────────────────────────────────────────────────────────────────────┐ │
+│ │ STEP 3: CREATE EMBEDDING (~3 seconds)                              │ │
+│ │ OpenAI API: embed("chicken biryani")                                │ │
+│ │ → Returns 1536-dimensional vector                                  │ │
+│ └─────────────────────────────────────────────────────────────────────┘ │
+│                        │                                                  │
+│                        ▼                                                  │
+│ ┌─────────────────────────────────────────────────────────────────────┐ │
+│ │ STEP 4: PINECONE QUERY (~4.5 seconds)                              │ │
+│ │ Searches ONLY:                                                      │ │
+│ │   - non_veg section                                                 │ │
+│ │   - biryani sub-section                                             │ │
+│ │   - chicken protein                                                 │ │
+│ │                                                                      │ │
+│ │ Search Space: 8-10 items (vs 399 without filter)                   │ │
+│ │ Result: Top 5 chicken biryani items                                │ │
+│ └─────────────────────────────────────────────────────────────────────┘ │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AGENT RECEIVES RESULTS                                                    │
+│ [                                                                         │
+│   {name: "Chicken Dum Biryani", price: 15.45, score: 0.678},           │
+│   {name: "Chicken Tikka Biryani", price: 15.45, score: 0.675},          │
+│   ...                                                                    │
+│ ]                                                                         │
+│                                                                           │
+│ Token Usage: ~250 tokens (vs ~1,050 without filter)                      │
+│ Time: ~7.5 seconds (vs ~9 seconds without filter)                        │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AGENT RESPONDS                                                            │
+│ "Got it. One Chicken Dum Biryani.                                        │
+│  Would you like anything else?"                                          │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ CUSTOMER: "No, that's all"                                                │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AGENT CONFIRMS                                                            │
+│ "Alright. One Chicken Dum Biryani.                                        │
+│  The total amount is $15.45.                                              │
+│  Would you like me to confirm this order?"                               │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ CUSTOMER: "Yes"                                                           │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AGENT ASKS FOR NAME (if new customer)                                     │
+│ "May I have your name, please?"                                          │
+│ Customer: "John"                                                          │
+│ Agent: Calls store_customer_name("John")                                  │
+│ Agent: "That's J-O-H-N, correct?"                                        │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AGENT CREATES ORDER                                                       │
+│ Calls: create_order(                                                      │
+│   items=[{name: "Chicken Dum Biryani", qty: 1, price: 15.45}],          │
+│   phone="+1234567890",                                                    │
+│   name="John"                                                             │
+│ )                                                                         │
+│                                                                           │
+│ → Saves to database                                                       │
+│ → Creates in Clover (if configured)                                      │
+└───────────────────────┬───────────────────────────────────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AGENT CONFIRMS ORDER                                                      │
+│ "Perfect! Placing your order now.                                         │
+│  Your order has been confirmed.                                           │
+│  Thank you for choosing Bawarchi Restaurant!"                             │
+└───────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                    KEY POINTS
+================================================================================
+
+1. HIERARCHICAL SEARCH:
+   - Automatically classifies queries
+   - Filters search space by 97.5% (8-10 items vs 399)
+   - Reduces tokens by 76% (250 vs 1,050)
+   - Reduces latency by 17% (7.5s vs 9s)
+
+2. NON-BLOCKING:
+   - Search runs in background thread (asyncio.to_thread)
+   - Agent can continue processing while waiting
+   - No impact on agent responsiveness
+
+3. AUTOMATIC:
+   - No manual intervention needed
+   - Classification happens automatically
+   - Filters applied automatically
+   - Agent doesn't need to know about hierarchy
+
+4. EFFICIENT:
+   - Only searches relevant items
+   - Faster results
+   - Lower costs
+   - Better accuracy
+
+================================================================================
+

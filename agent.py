@@ -87,14 +87,34 @@ class CreateOrderArgs(BaseModel):
     address: str | None = None
 
 
-# 🔴 ADDED: Pinecone menu search tool
+# 🔴 ADDED: Pinecone menu search tool with hierarchical filtering
 @function_tool()
 async def lookup_menu(query: str):
     """
-    Search menu items using Pinecone.
-    ALWAYS use this tool for menu, price, and category queries.
+    MANDATORY TOOL: Search menu items using Pinecone with hierarchical filtering.
+    This automatically filters by section/sub_section/protein to reduce token usage by 80-90%.
+    
+    ⚠️ CRITICAL: You MUST call this tool for ANY mention of:
+    - Food items (e.g., "biryani", "chicken", "dosa", "paneer")
+    - Prices (e.g., "how much", "price", "cost")
+    - Categories (e.g., "appetizers", "desserts", "beverages")
+    - Ordering (e.g., "I want biryani", "give me chicken", "one dosa")
+    
+    You have ZERO knowledge of menu items or prices. You MUST use this tool even for simple orders.
+    
+    Examples:
+    - User: "I want biryani" → MUST call lookup_menu("biryani")
+    - User: "chicken biryani" → MUST call lookup_menu("chicken biryani")
+    - User: "how much is dosa" → MUST call lookup_menu("dosa")
+    - User: "one paneer curry" → MUST call lookup_menu("paneer curry")
+    
+    Filtering examples:
+    - "chicken biryani" → searches only non_veg/biryani/chicken items (~8-10 items instead of 399)
+    - "masala puri" → searches only veg/chaat items (~13 items instead of 399)
+    - "mutton biryani" → searches only non_veg/biryani/mutton items (~5 items instead of 399)
     """
     # Run blocking Pinecone + OpenAI calls in a thread
+    # search_menu() automatically applies hierarchical filtering
     return await asyncio.to_thread(search_menu, query)
 
 def store_customer_name_tool_factory(agent_instance):

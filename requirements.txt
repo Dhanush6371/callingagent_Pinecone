@@ -17,5 +17,7 @@ pymongo
 tzdata
 aiohttp
 
-
+# Pinecone - Vector database for hierarchical menu search
+# Used for: menu item search with hierarchical filtering (section/sub_section/protein)
+# Index: "menudemo" (hierarchical metadata structure)
 pinecone

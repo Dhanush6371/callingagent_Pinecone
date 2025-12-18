@@ -574,7 +574,7 @@ MENU_ITEMS = [
         "id": "masala_puri",
         "text": "Masala Puri, spicy puri dish, price 8.45 dollars",
         "metadata": {"category": "chaat", "price": 8.45}
-    },
+    },masalazzz
     {
         "id": "dahi_puri",
         "text": "Dahi Puri, puri with yogurt and chutneys, price 8.45 dollars",
