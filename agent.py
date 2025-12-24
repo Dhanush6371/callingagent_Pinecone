@@ -118,7 +118,7 @@ def check_customer_status_tool_factory(agent_instance):
             - "returning_customer" with name if customer exists in Clover
             - "new_customer" if customer doesn't exist (need to collect name)
         """
-        if agent_instance and agent_instance.customer_name:
+        if agent_instance and agent_instance.is_known_customer:
             return {
                 "status": "returning_customer",
                 "name": agent_instance.customer_name,
@@ -139,6 +139,7 @@ def store_customer_name_tool_factory(agent_instance):
         """Store the customer's name in memory immediately when they say it. Use this right after the customer tells you their name, before spelling it back for confirmation."""
         if agent_instance and name:
             agent_instance.customer_name = name.strip()
+            agent_instance.is_known_customer = True  # SET FLAG: User provided name
             log.info(f"✅ Stored customer name in memory: {name.strip()}")
             return f"Name '{name.strip()}' stored successfully. You can now use this name when placing the order."
         return "Name storage failed."
@@ -190,6 +191,7 @@ def create_order_tool_factory(agent_instance):
             # Remember provided name for the rest of the call / future calls.
             if agent_instance and name:
                 agent_instance.customer_name = name.strip()
+                agent_instance.is_known_customer = True  # SET FLAG: Name provided in order
 
             # Make database call non-blocking - don't wait for it
             async def save_order_async():
@@ -281,6 +283,7 @@ class RestaurantAgent(Agent):
         self.current_session = None
         self.caller_phone = None
         self.customer_name = None  # Store customer name for personalized greeting
+        self.is_known_customer = False  # HARD FLAG: Prevents asking for name again
         self.termination_started = False
         self.order_placed = False
         self.job_context = job_context
@@ -638,6 +641,7 @@ async def entrypoint(ctx: JobContext):
                 customer_name = await driver.get_customer_name_by_phone(caller_phone)
                 if customer_name:
                     agent.customer_name = customer_name
+                    agent.is_known_customer = True  # SET FLAG: Customer exists in Clover
                     log.info(f"✅ Found existing customer: {customer_name}")
             except Exception as e:
                 log.warning(f"Error fetching customer name: {e}")

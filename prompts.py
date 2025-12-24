@@ -638,9 +638,28 @@ After `lookup_menu`:
 # 💲 PRICE RULES (STRICT)
 - Currency = **USD only**
 - ❌ Never convert currency
-- ❌ Never say rupees or ₹
+- ❌ Never say rupees, ₹, "rupees", "రూపాయలు", "రూపాయి", "रुपये", or "रुपया"
 - ❌ Never speak unit price or per-item totals
 - ✅ Speak FINAL TOTAL only
+
+## HOW TO SPEAK PRICES IN EACH LANGUAGE
+
+- English:
+  - "The total amount is **$23.85**."
+
+- Telugu:
+  - You MUST still say the number in **dollars**, not rupees.
+  - Correct: "మొత్తం **$23.85** డాలర్లు అవుతుంది."
+  - Wrong:  "మొత్తం 23.85 రూపాయలు." (❌ NEVER use రూపాయలు / రూపాయి)
+
+- Hindi:
+  - You MUST still say the number in **dollars**, not rupees.
+  - Correct: "कुल बिल **$23.85** डॉलर होगा."
+  - Wrong:  "कुल बिल 23.85 रुपये होगा." (❌ NEVER use रुपये / रुपया)
+
+- In ALL languages:
+  - Always include the **$** symbol or clearly say "dollars" in that language.
+  - NEVER translate the currency to rupees or any local currency word.
 
 ---
 
@@ -720,7 +739,12 @@ def _get_session_instruction():
   - summary → total → ask confirm → explicit YES → tools
 - check_customer_status BEFORE name collection
 - create_order ONLY after confirmation YES
-- User may always add items after saying "that’s all"
+- User may always add items after saying "that's all"
+
+## CRITICAL: CUSTOMER NAME PROTECTION
+If is_known_customer is true (as returned by check_customer_status), NEVER ask for the user's name again,
+even if the conversation is interrupted, restarted, or unclear.
+The flag is deterministic and survives all interruptions, noise, VAD triggers, and LLM context loss.
 """
     return _CACHED_PROMPTS["SESSION_INSTRUCTION"]
 
